@@ -1,0 +1,194 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #efefef;
+  margin: 200px 90px auto;
+}
+section {
+  margin: 20px;
+}
+.wrapper {
+  display: grid;
+  margin: 200px 90px auto;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+@media (max-width: 700px) {
+  .wrapper {
+    margin: 200px auto;
+  }
+}
+.wrapper .advantage-card {
+  width: 350px;
+  margin: 0 auto;
+  position: relative;
+  perspective: 1000px;
+}
+.wrapper .advantage-card .front-face {
+  background: #fff;
+  height: 220px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
+  transition: all 0.5s ease;
+  text-align: center;
+}
+#advantage-title {
+  text-align: left;
+}
+.advantage-card .front-face .icon {
+  height: 80px;
+}
+.advantage-card .front-face .icon i {
+  font-size: 65px;
+}
+.advantage-card .front-face span,
+.advantage-card .back-face span {
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.advantage-card .front-face .icon i,
+.advantage-card .front-face span {
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.advantage-card .back-face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 220px;
+  width: 100%;
+  padding: 30px;
+  color: #fff;
+  opacity: 0;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  transform: translateY(110px) rotateX(-90deg);
+  box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
+  transition: all 0.5s ease;
+}
+.advantage-card .back-face p {
+  margin-top: 10px;
+  text-align: justify;
+}
+.advantage-card:hover .back-face {
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+.advantage-card:hover .front-face {
+  opacity: 0;
+  transform: translateY(-110px) rotateX(90deg);
+}
+
+/* slider */
+.services {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slide-container {
+  /* max-width: 1120px; */
+  width: 100%;
+  padding: 40px 0;
+}
+.slide-content {
+  margin: 0 40px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.card {
+  border-radius: 25px;
+  background-color: #fff;
+  transition: all 1s ease;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 40px 20px;
+}
+.card:hover {
+  background-color: #6e93f7;
+
+  transition: all 1s ease;
+}
+.card-number {
+  padding-bottom: 10px;
+  color: #707070;
+}
+.card-img {
+  padding: 40px 20px;
+  text-align: center;
+}
+.name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  padding-bottom: 10px;
+}
+.description {
+  font-size: 14px;
+  color: #707070;
+}
+.button {
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  padding: 8px 16px;
+  background-color: #4070f4;
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button:hover {
+  background: #265df2;
+}
+
+.swiper-navBtn {
+  color: #6e93f7;
+  transition: color 0.3s ease;
+}
+.swiper-navBtn:hover {
+  color: #4070f4;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+  font-size: 35px;
+}
+.swiper-button-next {
+  right: 0;
+}
+.swiper-button-prev {
+  left: 0;
+}
+.swiper-pagination-bullet {
+  background-color: #6e93f7;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background-color: #4070f4;
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content {
+    margin: 0 10px;
+  }
+  .swiper-navBtn {
+    display: none;
+  }
+}
