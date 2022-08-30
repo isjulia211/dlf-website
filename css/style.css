@@ -65,7 +65,6 @@ body {
   background-color: var(--white-color);
 
   margin: 0 auto;
-  padding: 0 calc(8px + 1.5625vw);
 }
 
 /* Custom Scrollbar */
@@ -115,6 +114,7 @@ img {
 /* Reusuable CSS */
 section {
   margin: 7rem 0;
+  padding: 0 calc(8px + 1.5625vw);
 }
 .container {
   max-width: 1030px;
@@ -493,6 +493,33 @@ section {
     height: 100px;
   }
 }
+
+/* aims section */
+.bgcolor {
+  background-color: #6680b3;
+}
+.aims {
+  display: flex;
+}
+.aim-item {
+  max-height: 100vh;
+  padding: 10rem 5rem;
+  width: 50%;
+}
+.aim-numbers {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+}
+.aim-numberItem {
+  width: 50%;
+  text-align: center;
+}
+
+.aim-item img {
+  height: 300px;
+}
+
 /* service section */
 .swiper-slide {
   position: relative;
