@@ -607,7 +607,95 @@ section {
     display: none;
   }
 }
+/* project */
+.project {
+  align-items: flex-start;
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+}
 
+.pjcard-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 100%;
+}
+
+@media (min-width: 540px) {
+  .pjcard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .pjcard-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.pjcard {
+  list-style: none;
+  position: relative;
+  margin: 1rem;
+}
+
+.pjcard:before {
+  content: "";
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+
+.pjcard__background {
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  trsnsform: scale(1) translateZ(0);
+  transition: filter 200ms linear, transform 200ms linear;
+}
+
+.pjcard:hover .pjcard__background {
+  transform: scale(1.05) translateZ(0);
+}
+
+.pjcard-grid:hover > .pjcard:not(:hover) .pjcard__background {
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+.pjcard__content {
+  left: 0;
+  padding: var(--spacing-l);
+  position: absolute;
+  top: 0;
+}
+
+.pjcard__category {
+  color:#fefe;
+  font-size: 0.9rem;
+  margin-top:1rem;
+  margin-left:1rem;
+  text-transform: uppercase;
+}
+
+.pjcard__heading {
+  color:#fefe;
+    margin-top:1rem;
+  margin-left:1rem;
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
+}
 /* thailand */
 .half .content-subtitle,
 .half .content-title,
@@ -786,7 +874,9 @@ section {
 .brand-img:hover {
   opacity: 1;
 }
-
+.brand .section-description {
+  color: var(--text-color);
+}
 /* Review */
 .review {
   background-color: #f2f2f2;
