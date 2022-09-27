@@ -65,3 +65,8 @@ sr.reveal(
 
 sr.reveal(`.about-imageContent, .menu-items`, { origin: "left" });
 sr.reveal(`.about-details, .time-table`, { origin: "right" });
+
+//timeline
+$(function () {
+  $('[data-toggle="popover"]').popover();
+});

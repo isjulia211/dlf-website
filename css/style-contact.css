@@ -1,0 +1,115 @@
+.information {
+  margin-top: 0;
+}
+.title {
+  margin: 3rem 0;
+}
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 0.8fr;
+  grid-column-gap: 10rem;
+}
+.contact-info h2 {
+  text-transform: uppercase;
+}
+.left-icon {
+  width: 30%;
+  background-image: url("../images/icon-1.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-right: 5rem;
+}
+.left-icon img {
+  background-size: 10%;
+}
+.contact-item {
+  display: flex;
+  flex-direction: row;
+}
+.section-form {
+  display: flex;
+}
+.form-right {
+  width: 40%;
+  padding: 5rem;
+}
+.right-item{
+padding: 3rem;
+}
+.line{
+border-bottom:1px solid gray;}
+.contact-form {
+  width: 60%;
+  border: black 1px solid;
+  padding: 5rem;
+  display: block;
+}
+input[type="checkbox"] {
+  width: auto;
+}
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type="submit"] {
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #fefefe;
+  padding: 20px;
+}
+
+.col-100 {
+  float: left;
+  width: 100%;
+}
+.row {
+}
+.message {
+  min-height: 30rem;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-50 input[type="submit"] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.half {
+  display: grid;
+  grid-template-columns: repeat(2, 45%);
+  column-gap: 10%;
+  align-items: center;
+}
